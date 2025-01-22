@@ -1,0 +1,8 @@
+package es.upgrade.entidades;
+
+@Data
+public class Procesador {
+	private String marca;
+    private String modelo;
+    private int hz;
+}

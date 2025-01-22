@@ -1,0 +1,10 @@
+package es.upgrade.entidades;
+
+import lombok.Data;
+
+@Data
+public class DiscoDuro {
+	private String marca;
+    private String tipo;
+    private String capacidad;
+}

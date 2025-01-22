@@ -1,0 +1,5 @@
+package es.upgrade.demo.modelo.entidad;
+
+public class Direccion {
+
+}

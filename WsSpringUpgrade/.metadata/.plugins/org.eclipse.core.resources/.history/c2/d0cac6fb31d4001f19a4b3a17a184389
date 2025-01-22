@@ -1,0 +1,10 @@
+package es.upgrade.entidades;
+
+import lombok.Data;
+
+@Data
+public class Periferico {
+	private String tipo;
+    private String nombre;
+    private String marca;
+}

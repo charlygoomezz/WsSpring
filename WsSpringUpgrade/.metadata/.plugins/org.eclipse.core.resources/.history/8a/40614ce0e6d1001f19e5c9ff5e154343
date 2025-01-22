@@ -1,0 +1,82 @@
+package es.upgrade.configuracion;
+
+import java.util.ArrayList;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+
+import es.upgrade.modelo.entidad.Ordenador;
+import es.upgrade.modelo.entidad.Periferico;
+import es.upgrade.modelo.entidad.PlacaBase;
+import es.upgrade.modelo.entidad.Procesador;
+import es.upgrade.modelo.entidad.RAM;
+import es.upgrade.modelo.entidad.TarjetaGrafica;
+
+
+@Configuration
+public class ConfiguracionSpring {
+	
+	@Bean
+	private Ordenador ordenador(Procesador procesador, TarjetaGrafica tg, 
+			RAM ram,Periferico periferico, PlacaBase pb) {
+		Ordenador o = new Ordenador();
+		o.calcularPrecio();
+		o.setPlacaBase(pb);
+		o.setProcesador(procesador);
+		o.setTarjetaGrafica(tg);
+		o.setListaPerifericos(new ArrayList<Periferico>());
+		o.setListaRAMs(new ArrayList<RAM>());
+		
+		return o;
+	}
+	@Bean
+	@Scope("prototype")
+	private TarjetaGrafica tg() {
+		TarjetaGrafica tg = new TarjetaGrafica();
+		tg.getMarca("s");
+		tg.getModelo();
+		tg.getNucleoCUDA();
+		tg.getPrecio();
+		tg.getRam();
+		return tg;
+	}
+	@Bean
+	@Scope("prototype")
+	private RAM ram() {
+		RAM ram = new RAM();
+		ram.getMarca();
+		ram.getPrecio();
+		ram.getCapacidad();
+		return ram;
+	}
+	@Bean
+	private Procesador procesador() {
+		Procesador procesador = new Procesador();
+		procesador.getMarca();
+		procesador.getModelo();
+		procesador.getNumeroNucleos();
+		procesador.getPrecio();
+		return procesador;
+	}
+	@Bean
+	private PlacaBase placaBase() {
+		PlacaBase pb = new PlacaBase();
+		pb.getMarca();
+		pb.getPrecio();
+		pb.getTipo();
+		return pb;
+	}
+	@Bean
+	private Periferico periferico() {
+		Periferico p = new Periferico();
+		p.getMarca();
+		p.getPrecio();
+		p.getTipo();
+		return p;
+		
+	}
+	
+	
+	
+}

@@ -1,0 +1,24 @@
+package es.upgrade.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import es.upgrade.demo.modelo.entidad.Direccion;
+import es.upgrade.demo.modelo.entidad.Empleo;
+
+@SpringBootApplication
+public class Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+		
+		Direccion d = new Direccion();
+		d.setTipoVia("Sonchans");
+		System.out.println(d);
+		
+		Empleo e = new Empleo("Upgrade", 120000, false);
+		e.isBaja();
+		System.out.println(e);
+	}
+
+}

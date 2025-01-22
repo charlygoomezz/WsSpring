@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="procesador" class="modelo.entidad.Procesador">
+		<property name="marca" value="Intel"></property>
+		<property name="modelo" value="i9"></property>
+		<property name="numeroNucleos" value="16"></property>
+		<property name="precio" value="500"></property>
+	</bean>
+	<bean id="tarjetaGrafica" class="modelo.entidad.TarjetaGrafica">
+		<property name="marca" value="Nvidia"></property>
+		<property name="modelo" value="5090"></property>
+		<property name="nucleoCUDA" value="16384"></property>
+		<property name="precio" value="1090"></property>
+		<property name="ram">
+			<bean class="modelo.entidad.RAM">
+				<property name="marca" value="Nvidia"></property>
+				<property name="capacidad" value="24"></property>
+				<property name="precio" value="0"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="placaBase" class="modelo.entidad.PlacaBase">
+		<property name="marca" value="Barracuda"></property>
+		<property name="precio" value="250"></property>
+		<property name="tipo" value="AMD5"></property>	
+	</bean>
+	
+	<bean id="ram1" class="modelo.entidad.RAM">
+		<property name="marca" value="HyperX"></property>
+		<property name="capacidad" value="8"></property>
+		<property name="precio" value="200"></property>	
+	</bean>
+	<bean id="ram2" class="modelo.entidad.RAM">
+		<property name="marca" value="HyperX"></property>
+		<property name="capacidad" value="8"></property>
+		<property name="precio" value="200"></property>	
+	</bean>
+	<bean id="ram3" class="modelo.entidad.RAM">
+		<property name="marca" value="HyperX"></property>
+		<property name="capacidad" value="8"></property>
+		<property name="precio" value="200"></property>	
+	</bean>
+	<bean id="ram4" class="modelo.entidad.RAM">
+		<property name="marca" value="HyperX"></property>
+		<property name="capacidad" value="8"></property>
+		<property name="precio" value="200"></property>	
+	</bean>
+	
+	<bean id="monitor" class="modelo.entidad.Periferico">
+		<property name="tipo" value="OLED"></property>
+		<property name="marca" value="LG"></property>
+		<property name="precio" value="1099"></property>	
+	</bean>
+	<bean id="teclado" class="modelo.entidad.Periferico">
+		<property name="tipo" value="DuckyOneSF"></property>
+		<property name="marca" value="Ducky"></property>
+		<property name="precio" value="155"></property>	
+	</bean>
+	<bean id="raton" class="modelo.entidad.Periferico">
+		<property name="tipo" value="DeathRatter"></property>
+		<property name="marca" value="Razer"></property>
+		<property name="precio" value="99"></property>	
+	</bean>
+	
+	<bean id="ordenador" class="modelo.entidad.Ordenador">
+		<property name="precio" value="2500"></property>
+		<property name="procesador" ref="procesador" ></property>
+		<property name="tarjetaGrafica" ref="tarjetaGrafica" ></property>
+		<property name="placaBase" ref="placaBase" ></property>
+		<property name="listaRAMs" >
+			<bean class="java.util.ArrayList">
+				<constructor-arg>
+					<list value-type="modelo.entidad.RAM" >
+						<ref bean="ram1"/>
+						<ref bean="ram2"/>
+						<ref bean="ram3"/>
+						<ref bean="ram4"/>
+					</list>
+				</constructor-arg>
+			</bean>
+		</property>
+		<property name="listaPerifericos" >
+			<bean class="java.util.ArrayList">
+				<constructor-arg>
+					<list value-type="modelo.entidad.Periferico" >
+						<ref bean="monitor"/>
+						<ref bean="teclado"/>
+						<ref bean="raton"/>
+					</list>
+				</constructor-arg>
+				
+			</bean>
+		</property>
+		
+		
+	</bean>
+	
+	
+	
+</beans>

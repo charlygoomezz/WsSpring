@@ -1,0 +1,25 @@
+package es.upgrade.entidades;
+
+import java.util.List;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+import lombok.Data;
+
+@Component
+@Scope("protoype")
+@Data
+public class Ordenador {
+
+    private String nombre;
+    private int precio;
+    private Procesador procesador;
+    private PlacaBase placaBase;
+    private List<Ram> rams;
+    private DiscoDuro discoDuro;
+    private FuenteAlimentacion fuenteAlimentacion;
+    private TarjetaGrafica tarjetaGrafica;
+    private List<Periferico> perifericos;
+
+}

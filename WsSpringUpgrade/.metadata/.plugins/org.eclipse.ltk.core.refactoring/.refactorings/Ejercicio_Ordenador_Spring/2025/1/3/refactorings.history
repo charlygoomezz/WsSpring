@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;modelo.entidad&apos; to &apos;ejercicioOrdenador_config/src/main/java&apos;&#x0A;- Original project: &apos;Ejercicio_Ordenador_Spring&apos;&#x0A;- Destination element: &apos;ejercicioOrdenador_config/src/main/java&apos;&#x0A;- Original element: &apos;Ejercicio_Ordenador_Spring/src/main/java/modelo.entidad&apos;" description="Copy package" destination="=ejercicioOrdenador_config/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;modelo.entidad" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1736795678443" version="1.0"/>
+</session>

@@ -1,0 +1,12 @@
+package es.upgrade.demo.modelo.entidad;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope("protoype")
+public class Direccion {
+	private String tipoVia;
+	private String nombreVia;
+	private String pais;
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;modelo.entidades&apos; to &apos;es.upgrade.modelo.entidades&apos;&#x0A;- Original project: &apos;06_SpringBootInit&apos;&#x0A;- Original element: &apos;06_SpringBootInit/src/main/java/modelo.entidades&apos;&#x0A;- Renamed element: &apos;06_SpringBootInit/src/main/java/es.upgrade.modelo.entidades&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;modelo.entidades&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;modelo.entidades" name="es.upgrade.modelo.entidades" qualified="false" references="true" stamp="1736794402710" textual="false" version="1.0"/>
+</session>

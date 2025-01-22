@@ -1,0 +1,54 @@
+package es.upgrade;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import es.upgrade.demo.modelo.entidad.Persona;
+import es.upgrade.entidades.Ordenador;
+
+@SpringBootApplication
+public class EjercicioJsonApplication implements CommandLineRunner {
+	
+	@Autowired
+	private ApplicationContext context;
+
+
+	public static void main(String[] args) {
+		SpringApplication.run(EjercicioJsonApplication.class, args);
+		
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		Ordenador o = context.getBean("persona", Ordenador.class);
+		System.out.println(o);
+		
+		File file = new File("ordenador.json");
+		
+		try(FileReader fr = new FileReader(file);
+		    BufferedReader br = new BufferedReader(fr)){
+			String json = br.readLine();
+			Gson gson = new Gson();
+			o = gson.fromJson(json, new TypeToken<Ordenador>(){}.getType());
+			//Persona p = gson.fromJson(json, Persona.class);
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+		
+	}
+
+
