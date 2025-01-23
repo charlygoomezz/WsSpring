@@ -1,8 +1,0 @@
-package es.upgrade.entidades;
-
-public class PlacaBase {
-	private String modelo;
-    private String marca;
-    private int slotsRam;
-
-}

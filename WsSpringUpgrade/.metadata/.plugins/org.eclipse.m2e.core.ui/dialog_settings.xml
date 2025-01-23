@@ -53,6 +53,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="AD_03_JPA"/>
 			<item value="05_SpringJavaConfig"/>
 			<item value="04_SpringAnotacionesCapas"/>
 			<item value="03_SpringAnotaciones01"/>

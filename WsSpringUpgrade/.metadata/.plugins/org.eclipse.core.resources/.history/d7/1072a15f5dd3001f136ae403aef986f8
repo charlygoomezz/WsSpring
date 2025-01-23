@@ -1,7 +1,0 @@
-package es.upgrade.demo.modelo.entidad;
-
-public class Empleo {
-	private String empresa;
-	private double salario;
-	private boolean baja;
-}
