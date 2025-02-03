@@ -72,6 +72,8 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/charlygoomezz/Desktop/WsSpring/WsSpringUpgrade/07_ServicioREST"/>
+			<item value="/Users/charlygoomezz/Desktop/WsSpring/WsSpringUpgrade/PSP_01_Rest"/>
 			<item value="/Users/charlygoomezz/Desktop/WsSpring/WsSpringUpgrade/07_SpringBoot"/>
 			<item value="/Users/charlygoomezz/Desktop/WsSpring/WsSpringUpgrade/ejercicioOrdenador_config"/>
 			<item value="/Users/charlygoomezz/Desktop/WsSpring/WsSpringUpgrade/Ejercicio_Ordenador_Spring"/>

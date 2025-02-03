@@ -5,6 +5,7 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 import modelo.entidad.Coche;
+import modelo.entidad.Persona;
 
 public class MainJPABuscar {
 	public static void main(String[] args) {
@@ -13,9 +14,11 @@ public class MainJPABuscar {
 		
 		System.out.println("Entity manager creado");
 		
-		Coche coche = em.find(Coche.class,1);
+		Persona persona = em.find(Persona.class,1);
+		persona = em.find(Persona.class, 1);
+		em.clear();
 		
-		System.out.println(coche);
+		System.out.println(persona);
 		em.close();
 		
 	}
