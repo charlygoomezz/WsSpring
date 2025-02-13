@@ -51,8 +51,10 @@
 			<item value="es.upgrade"/>
 		</list>
 		<list key="name">
+			<item value="Ejercicio_08JPA"/>
 		</list>
 		<list key="artifactId">
+			<item value="Ejercicio_08JPA"/>
 			<item value="AD_03_JPA"/>
 			<item value="05_SpringJavaConfig"/>
 			<item value="04_SpringAnotacionesCapas"/>
